@@ -80,11 +80,15 @@ for (var i = 0; i < cards.length; i++) {
 let row = document.getElementsByClassName('row')[1];
 let nextCardBtn = document.getElementsByClassName('jumbotron')[0].getElementsByClassName('btn btn-secondary my-2')[0];
 console.log(nextCardBtn);
+
+nextCardBtn.addEventListener("click", function() {
 let cardsDiv = document.getElementsByClassName('col-md-4');
 let firstCard = cardsDiv[0];
 let lastCard = cardsDiv[cardsDiv.length -1];
-
-nextCardBtn.addEventListener("click", function() {
   row.insertBefore(lastCard, firstCard);
   console.log(lastCard);
 });
+
+// Fonctionnalité 8 :
+
+// A faire, tourner les cards dans l'autre sens (inverse de la 7)
